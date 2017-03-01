@@ -1,0 +1,121 @@
+/* CSS Document */
+
+.center
+		{
+		text-align: center;
+		font:bold;
+	
+		}
+.table
+		{
+			width: 100%;
+			border: 1px solid green; 
+			text-align: center;
+			margin-bottom: 25px;
+		}
+.centertext
+		{
+			width: 100%;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+
+.margin
+		{
+		 margin-bottom: :25px;	
+		}
+
+.red
+		{
+		 color:red;
+		 font-size: 120%;
+
+		}
+.fondo
+	{
+	background-image: url('http://www.idfromdc.com/wp-content/uploads/2013/03/At-the-Office-Mac-Apple-Wallpapers-Creative-Planning-298219.jpg');
+	}
+
+body {
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.container header {
+    overflow: hidden;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#images {
+    padding: 20px 0;
+}
+
+footer {
+    border-top: 1px solid #E5E5E5;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.imagen {
+	width: 100px;
+}
+
+.redfront{
+        color:red;
+        font-size: 60%;
+        margin: 10px;
+        font:bold 12px;
+        display: inline-flex;
+    }
+
+.negrita
+{
+	font:bold 12px;
+	font-weight:bold;
+}
+
+.yellowfront{
+        color:yellow;
+    }
+.greenfront{
+        color:green;
+        font-size: 60%;
+        margin: 10px;
+        font:bold 12px;
+        display: inline-flex;
+    }
+.backgroundYellow {
+	background-color: #f1fcc9;
+}
+.backgroundRed
+{
+background-color: #efada7;
+}
+.backgroundGreen
+{
+background-color: #c9fcce;
+}
+.small
+{
+font-size: 70%;
+}
+a:hover {
+	cursor: pointer;
+}
+.editarform{
+	background-color: white;
+    padding: 35px;
+    margin: 10px;
+    border-radius: 40px;
+    border: 2px solid #737377;
+}
+
+.editarform input {
+	padding: 5px;
+	margin:10px 0px;
+}
+.inline{
+display: inline-flex;
+}

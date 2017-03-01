@@ -1,0 +1,20 @@
+<div class="media-object" ng-class="{backgroundRed: tareas.priorityNumber === 1, backgroundYellow: tareas.priorityNumber === 2, backgroundGreen: tareas.priorityNumber === 3}">
+    <img class="col-sm-2 col-md-2 col-xs-2 col-sm-2 img-rounded" ng-src="{{ tareas.image }}">
+    <h4 class="media-heading">{{ tareas.name }}
+     <div class="pull-right">
+         <a  href="{{'#/editar/' + tareas.id}}">
+            <span class="glyphicon glyphicon-edit " ></span> 
+            Editar  
+        </a>
+
+        <a ng-click="eliminar(tareas.id)">
+            <span class="glyphicon glyphicon-minus " ></span> 
+            Eliminar
+        </a>
+    </div>
+    </h4>
+    <p>{{tareas.date | date : format}}</P>
+    <p class="negrita">{{tareas.priority}}</P>
+    <p>{{ tareas.status }}</p>
+    <p>{{tareas.desc}}</P>
+</div>

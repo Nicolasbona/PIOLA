@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/<html lang="es" >
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+	<script>
+	    webshims.setOptions('forms-ext', {types: 'date'});
+		webshims.polyfill('forms forms-ext');
+	</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="js/main.js"></script>
+    <title>To Do List</title>
+</head>
+<body class="fondo" ng-app="TodoAPP" >
+	<div>
+	    <div class="container" >
+	        <header>
+	        	<h3 class="text-muted">To Do List</h3>
+	        	<a class="pull-right" href="#/agregar" name="agregar"><span class="glyphicon glyphicon-plus"></span></a>
+	        	<br/>
+	        </header> 
+			<div ng-view></div> 
+	        <footer>
+	            <p class="negrita">&copy; To Do List</p>
+	        </footer>
+	    </div>
+	</div>    
+
+</body>
+
+</html>

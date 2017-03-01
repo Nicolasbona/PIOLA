@@ -1,0 +1,60 @@
+<form ng-class="'editarform'" name="tareaForm">
+	<h3>{{titulo}}<h3>
+	<label>
+		Nombre:
+		<br/>
+		<input type="text" name="name" ng-model="tarea.name" required /><div ng-class="{redfront: !tarea.name, greenfront: tarea.name}">{{(tarea.name)|| 'Debe ingresar un nombre para la tarea'}}</div>
+	</label>
+	<br/>
+	<label>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Priority:
+				<span class="caret"></span>
+				</button>
+		    <ul class="dropdown-menu">
+		      <li class="dropdown-header"></li>
+		      <li><a  ng-click= "tarea.priorityNumber = 1">1- High</a></li>
+		      <li><a  ng-click= "tarea.priorityNumber = 2">2- Medium</a></li>
+		      <li><a  ng-click= "tarea.priorityNumber = 3">3- Low</a></li>
+	      	</ul>
+	      	<br/>
+		<input type="number" name="priority" ng-model="tarea.priorityNumber" readonly="readonly" required />
+		<div ng-class="{redfront: !tarea.priorityNumber, greenfront: tarea.priorityNumber}">{{(tarea.priorityNumber)|| 'seleccione prioridad'}}</div>
+		</div>
+	</label>
+	<br/>
+	<label>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Status:
+				<span class="caret"></span>
+				</button>
+		    <ul class="dropdown-menu">
+		      <li class="dropdown-header"></li>
+		      <li><a  ng-click= "tarea.status = 'To do'">To do</a></li>
+		      <li ng-hide = "titulo==='Agregar:'"><a  ng-click= "tarea.status = 'Doing'">Doing</a></li>
+		      <li ng-hide = "titulo==='Agregar:'"><a  ng-click= "tarea.status = 'Done'">Done</a></li>
+	      	</ul>
+	      	<br/>
+		<input type="text" name="status" ng-model="tarea.status" readonly="readonly" required />
+		<div ng-class="{redfront: !tarea.status, greenfront: tarea.status}">{{(tarea.status)|| 'seleccione el status'}}</div>
+		</div>	      
+		
+	</label>
+	<br/>
+	<label>
+		<div ng-class="{redfront: !tarea.date, greenfront: tarea.date}">{{(tarea.date | date : format) || 'Seleccione una fecha:'}}</div>
+		<div uib-datepicker ng-model="tarea.date" required/></div>
+		
+	</label>
+	<br/>
+	<label>
+		Descripcion:
+		<br/>
+		<textarea type="text" name="desc" ng-model="tarea.desc" required/></textarea>
+		<div ng-class="{redfront: !tarea.desc, greenfront: tarea.desc}">{{(tarea.desc)|| 'Ingrese una descripcion'}}</div>
+		</div>	
+	</label>
+	<br/>
+	<button type="submit" ng-disabled="!tareaForm.$valid" class="btn btn-default" ng-click="guardar()">Guardar</button>
+	<a href="#/"><button class="btn btn-default">Cancelar</button></a>
+</form>

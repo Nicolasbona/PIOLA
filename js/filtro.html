@@ -1,0 +1,19 @@
+<div class="nav nav-pills ">
+	<label>Search: <input ng-model="searchText"></label>
+	<div class="dropdown pull-right">
+		<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Options:
+			<span class="caret"></span>
+		</button>
+	    <ul class="dropdown-menu">
+	      <li class="dropdown-header">Sort By</li>
+	      <li><a  href="#/" ng-click="sortBy('date')" >Date</a></li>
+	      <li><a  href="#/" ng-click="sortBy('priorityNumber')">Priority</a></li>
+	      <li><a  href="#/" ng-click="sortBy('name')">Name</a></li>
+	      <li class="divider"></li>
+	      <li class="dropdown-header">Filter By</li>
+	      <li><a  href="#/" ng-click="searchText=''" >All</a></li>
+	      <li><a  href="#/" ng-click="searchText='Doing'">Doing</a></li>
+	      <li><a  href="#/" ng-click="searchText='Done'">Done</a></li>
+	    </ul>
+	</div>
+</div>
