@@ -208,11 +208,12 @@ myApp.controller("tareaDirectiveController",['Storage',"$scope",function(Storage
 	}
 }])
 
-myApp.controller("editarRouteController",['Storage',"$scope","$routeParams", function (Storage,$scope,$routeParams){
+myApp.controller("editarRouteController",['Storage',"$scope","$routeParams","$location", function (Storage,$scope,$routeParams,$location){
 	$scope.tareaAEditar = Object.assign({}, Storage.get($routeParams.tareaId));
 		$scope.guardar=function(){
 		Storage.edit($routeParams.tareaId,$scope.tareaAEditar);
-		}
+		$location.path('/')
+		};
 }])
 
 myApp.config(function($routeProvider){
